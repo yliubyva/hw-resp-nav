@@ -1,0 +1,11 @@
+.logo {
+    margin-left: 30px;
+    &__text {
+        overflow: hidden;
+        @include text(18px, 500, $color-purple-dark, 21.94px);
+        position: relative;
+        left: 8px;
+        transition: left .3s ease-out;
+    }
+}
+

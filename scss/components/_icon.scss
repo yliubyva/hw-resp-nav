@@ -1,0 +1,30 @@
+.icon {
+    width: 26px;
+    height: 26px;
+    fill: $color-gray-dark;
+    &__group {
+        position: relative;
+    }
+
+    &__badge {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -5px;
+        left: 20px;
+        @include text(12px, 700, $color-gray-dark, 14.63px);
+        text-align: center;
+        padding: 2px;
+        border-radius: 50%;
+        &--green {
+            background: $color-green;
+        }
+        &--red {
+            background: $color-red;
+            color: $color-white;
+        }
+        &--yellow {
+            background: $color-yellow;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.check {
+    position: absolute;
+    opacity: 0; 
+    
+    &__arrow {
+        position: fixed;
+        cursor: pointer;
+        background: $color-white;
+        border-radius: 50%;
+        z-index: 20; 
+        transition: left .3s ease-out;
+    }
+
+    &,
+    &__arrow {
+        width: 20px;
+        height: 20px;
+        top: 36px;
+        left: 76px;
+    }
+
+    &:checked + &__arrow {
+        transform: rotate(180deg);
+    }
+    
+    &:checked + &__arrow {
+        left: 185px;
+    }
+    
+    &:checked ~ .sidebar__categories,
+    &:checked ~ .sidebar__logo-link {
+        max-width: 220px;
+    }
+    
+    &:checked ~ .sidebar__categories > .sidebar__container > .sidebar__title {
+        left: 0;
+    }
+    
+    &:checked ~ .sidebar__categories > .sidebar__container > .divider {
+        left: -100px;
+    }
+    
+    &:checked ~ .sidebar__logo-link > .logo__text {
+        left: 0;
+    }
+}
+

@@ -30,10 +30,8 @@
 }
 
 $breakpoints: (
-  "mobile": 768px,
-  "desktop": 1024px,
-  "hd": 1240px,
-  "fullhd": 1440px,
+  "tablet": 768px,
+  "desktop": 1440px,
 );
 
 @mixin media($screen) {
@@ -46,4 +44,17 @@ $breakpoints: (
       @content;
     }
   }
+}
+
+@mixin flex(
+  $direction: row, 
+  $wrap: nowrap, 
+  $justify: flex-start, 
+  $align: stretch
+  ) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
 }

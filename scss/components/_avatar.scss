@@ -1,0 +1,22 @@
+.avatar {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    
+    &__photo {
+        border-radius: 50%;
+    }
+    
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $color-white;
+        border-radius: 50%;
+        background: $color-green;
+    }
+}

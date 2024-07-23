@@ -1,0 +1,68 @@
+.sidebar {
+  padding: 30px 0;
+  height: 100vh;
+  background: $color-white;
+  box-shadow: 0px 0px 20px 0px #00000026;
+  position: fixed;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &__logo-link {
+    margin-bottom: 40px;
+    @include flex(row, nowrap, flex-start, center);
+    gap: 7px;
+  }
+
+  &__categories {
+    @include flex(column, nowrap);
+    gap: 30px;
+  }
+
+  &__logo-link, 
+  &__categories {
+    max-width: 86px;
+    transition: max-width 0.3s ease-out;
+  }
+
+  &__link {
+    padding: 0px 30px;
+    height: 46px;
+    @include flex(row, nowrap, flex-start, center);
+    gap: 20px;
+  }
+
+  &__title,
+  &__name {
+    @include text(16px, 400, $color-gray-middle, 19.5px);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 0 15px 5px;
+    position: relative;
+    left: -90px;
+    transition: left 0.3s ease-out;
+  }
+
+  &__link:hover {
+    background: $color-purple-light;
+    box-shadow: 0px 0px 20px 0px $color-purple-light;
+  }
+
+  &__link:hover &__icon {
+    fill: $color-white;
+  }
+
+  &__link:hover &__name {
+    color: $color-white;
+  }
+
+  &__link:hover,
+  &__link:hover &__icon,
+  &__link:hover &__name {
+    transition: all 0.3s ease;
+  } 
+}

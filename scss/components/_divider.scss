@@ -1,0 +1,23 @@
+.divider {
+    width: 15px;
+    border-radius: 10px;
+    border: 2px solid $color-purple-light;
+    position: relative;
+    top: 10px;
+    left: 35px;
+    transition: left 0.3s ease;
+    &::after,
+    &::before {
+        content: '';
+        width: 10px;
+        border-radius: 10px;
+        border: 2px solid $color-purple-light;
+        position: absolute;
+        top: -2px;
+        left: -18px;
+    }
+
+    &::before {
+        left: 20px;
+    }
+}

@@ -1,0 +1,47 @@
+.header {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    padding-left: 215px;
+    display: none;
+    @include media("tablet") {
+        display: block;
+    }
+
+    &__container {
+        @extend .container;
+        height: 80px;
+        max-width: 1170px;
+        background: #fff;
+        box-shadow: 0px 0px 20px 0px #00000026;
+        border-radius: 10px;
+        padding: 27px 20px;
+        @include flex(row, nowrap, space-between, center);
+    }
+
+    &__quick-settings,
+    &__quick-panel,
+    &__settings,
+    &__lang {
+        @include flex(row, nowrap, flex-start, center);
+    }
+
+    &__quick-settings {
+        gap: 50px;
+    }
+
+    &__quick-panel,
+    &__settings,
+    &__lang {
+        gap: 20px;
+    }
+
+    &__en {
+        @include text(18px, 400, $color-gray-dark, 21.94px);
+    }
+
+    &__link:hover &__icon {
+        fill: $color-purple-light;
+    }
+}
+
